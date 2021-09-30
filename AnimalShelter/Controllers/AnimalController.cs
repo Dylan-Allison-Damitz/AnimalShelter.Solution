@@ -16,7 +16,8 @@ namespace AnimalShelter.Controllers
 
     public ActionResult Index()
     {
-      List<Animal> model = _db.Animals.ToList();
+      List<Animal> model = _db.Animals.OrderBy(x => x.DateOfArrival).ToList();
+      
       return View(model);
     }
     public ActionResult Create()
@@ -38,5 +39,3 @@ namespace AnimalShelter.Controllers
     }
   }
 }
-
-// [Route("/animals")]

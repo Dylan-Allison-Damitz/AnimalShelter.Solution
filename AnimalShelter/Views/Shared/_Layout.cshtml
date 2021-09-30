@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
-    <div id="bigBox">
-    @RenderBody()
-    @await Html.PartialAsync("Footer")
+    <div class="container">
+      <div id="bigBox">
+        @RenderBody()
+        @await Html.PartialAsync("Footer")
+      </div>
     </div>
   </body>
 </html>
